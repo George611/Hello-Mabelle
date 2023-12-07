@@ -1,0 +1,19 @@
+<body>
+    <ul id ="Food_id"></ul>
+    <script>
+        var ul = document.getElementById('Food_id');
+        fetch('https://mabelle.onrender.com/Food')
+      .then(response => response.json())
+      .then(json => {
+        json.forEach(f => {
+            let li = document.createElement('li');
+            li.innerHTML = f.name;
+            ul.appendChild(li);
+
+            
+        });
+      })
+
+    </script>
+
+</body>
